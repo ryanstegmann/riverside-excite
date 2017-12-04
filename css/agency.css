@@ -219,9 +219,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-brand>img {
-    height: 50px;
+    height: 25px;
     max-width: 250px;
-    margin: -15px;
+    margin: 0px;
 }
 
 @media(min-width:768px) {
@@ -282,6 +282,19 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
     background-color: #178bcc;
+}
+
+.navbar-default.navbar-shrink {
+    background-color: #fff;
+}
+
+@media(max-width:768px) {
+  .btn-light-out {
+    margin-top: 25px;
+  }
+  .navbar-shrink .navbar-collapse ul li a {
+    color: #333;
+  }
 }
 
 @media(min-width:768px) {
@@ -367,7 +380,7 @@ header .intro-text {
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 60px;
     font-weight: 700;
 }
@@ -376,10 +389,32 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     /*text-transform: uppercase;*/
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     /*font-weight: 700;*/
     line-height: 25px;
 }
+
+@media(min-width:768px) {
+  header .intro-text .intro-lead-in {
+      margin-bottom: 25px;
+      font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 50px;
+      line-height: 60px;
+      font-weight: 700;
+  }
+
+  header .intro-text .intro-heading {
+      margin-bottom: 25px;
+      /*text-transform: uppercase;*/
+      font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 22px;
+      /*font-weight: 700;*/
+      line-height: 25px;
+  }
+}
+
+
+
 
 @media(min-width:768px) {
     header .intro-text {
@@ -480,9 +515,18 @@ aside.about img {
 
 .service-tab-content.active {
   display: inline-block;
-  width: 100%;
+  width: 95%;
   background-color: #FFFFFF;
   padding: 15px;
+}
+
+@media(min-width:992px) {
+  .service-tab-content.active {
+    display: inline-block;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 15px;
+  }
 }
 
 .parallax {
