@@ -1,7 +1,7 @@
 // Smooth scrolling via animate()
 $(document).ready(function(){
   $("a").on('click', function(event) {
-    if (this.hash && window.location.pathname == "/") {
+    if (this.hash && window.location.pathname == "https://ryanstegmann.github.io/riverside-excite/") {
       event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
@@ -29,11 +29,11 @@ $(document).ready(function(){
   $(window).scroll(function() {
     if ($(window).scrollTop() >= maxOffset) {
       $('.navbar-default').addClass('navbar-shrink');
-      $('#logo').attr('src', '/img/logo-dark.png');
+      $('#logo').attr('src', 'https://ryanstegmann.github.io/riverside-excite/img/logo-dark.png');
     }
     else {
       $('.navbar-default').removeClass('navbar-shrink');
-      $('#logo').attr('src', '/img/logo-light.png');
+      $('#logo').attr('src', 'https://ryanstegmann.github.io/riverside-excite/img/logo-light.png');
     }
   });
 });
