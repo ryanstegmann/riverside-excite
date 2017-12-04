@@ -1,7 +1,8 @@
 // Smooth scrolling via animate()
 $(document).ready(function(){
   $("a").on('click', function(event) {
-    if (this.hash && window.location.pathname == "https://ryanstegmann.github.io/riverside-excite/") {
+    console.log(window.location.pathname);
+    if (this.hash && window.location.pathname == "/riverside-excite/" || window.location.pathname == "/riverside-excite/startup-toolbox/") {
       event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
@@ -16,7 +17,7 @@ $(document).ready(function(){
       $(this.currentPopup).modal('hide')
       this.shouldClosePopup = false
     }
-    if (window.location.hash.startsWith('#startupModal')) {
+    if (window.location.hash.startsWith('#startup')) {
       this.shouldClosePopup = true;
       this.currentPopup = window.location.hash
     }
@@ -36,17 +37,6 @@ $(document).ready(function(){
       $('#logo').attr('src', 'https://ryanstegmann.github.io/riverside-excite/img/logo-light.png');
     }
   });
-});
-
-
-$(document).ready(function(){
-  var maxOffset = 300;
-  if ($(window).scrollTop() >= maxOffset) {
-    $('.navbar-default').addClass('navbar-shrink');
-  }
-  else {
-    $('.navbar-default').removeClass('navbar-shrink');
-  }
 });
 
 // Highlight the top nav as scrolling occurs
